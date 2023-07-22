@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+/* navigation bar */
+.navbar-nav {
+    margin: 0 auto;
+   
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+.menu-item img{
+    height: 300px;
+   margin-left: 15%;
+    padding: 0;
+}
+h2{
+    color:red;
+    font-weight: bolder;
+}
+h4{
+    color: grey;
+   
+}
+.carousel-item img{
+    filter: brightness(40%);
+    
+}
+.carousel-item p{
+    text-align: justify;
+}
+.stats .container-fluid{
+    background-color: rgb(127, 126, 126,.3);
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 90px 0 ;
+
+    
+   
+    
+
+}
+.stats .container-fluid .stats-item h1,h5{
+    opacity: 1;
+    
+    font-weight: bold;
+
+}
+.stats{
+    background-image: url(./stats-bg.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+}
+    
+.stats-item {
+    color: white;
+    min-width:200px;
+   
+    
+}
+.stats-item h5{
+    color: rgb(255, 255, 255,.5);
+}
+.card{
+    margin-top: 8rem;
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.15);
+}
+.card-title{
+    text-align: center;
+}
+.bookform .btn{
+    margin-left: 45%;
+}
+
+
+
+  
+
+
+ 
+
+  
