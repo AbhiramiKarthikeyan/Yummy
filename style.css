@@ -16,6 +16,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    
   }
 .menu-item img{
     height: 300px;
@@ -30,8 +31,20 @@ h4{
     color: grey;
    
 }
+.carousel{
+   
+    width:100%;
+    
+}
+.carousel-item{
+ margin-left:5%;
+}
 .carousel-item img{
     filter: brightness(40%);
+    height: 500px;
+    width: 90%;
+    
+
     
 }
 .carousel-item p{
@@ -40,16 +53,12 @@ h4{
 .stats .container-fluid{
     background-color: rgb(127, 126, 126,.3);
     width: 100%;
-    height: 280px;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
-    padding: 90px 0 ;
-
-    
-   
+    padding: 90px 0 ;}
     
 
-}
 .stats .container-fluid .stats-item h1,h5{
     opacity: 1;
     
@@ -75,6 +84,7 @@ h4{
 .card{
     margin-top: 8rem;
     transition: all 0.3s;
+    
 }
 .card:hover{
     transform: scale(1.15);
@@ -85,6 +95,152 @@ h4{
 .bookform .btn{
     margin-left: 45%;
 }
+/* gallery section */
+
+.slider{
+    height: 250px;
+    margin: auto;
+    position:relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+}
+
+.slide-track{
+    display: flex;
+    width: calc(250px * 16);
+    animation: scroll 40s linear infinite;
+    
+}
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.slider .slide-track .slide img{
+    width: 100%;
+    transition: transform 1s;
+}
+.slider .slide-track .slide img:hover{
+    transform: translateZ(20px);
+}
+@keyframes scroll{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 8));
+    }
+}
+
+.anime{
+    opacity: 0;
+    transform:translateY(30px) ;
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.about-content .play-btn {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background: radial-gradient(var(--color-primary) 50%, rgba(206, 18, 18, 0.4) 52%);
+
+    display: block;
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+    overflow: hidden;
+    
+  }
+  
+  .about-content .play-btn:before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    animation-delay: 0s;
+    animation: pulsate-btn 2s;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid rgba(206, 18, 18, 0.7);
+    top: -15%;
+    left: -15%;
+    background: rgba(206,18,18,0.7)
+  }
+  
+  .about-content .play-btn:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 100;
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+   
+  }
+  
+  .about-content .play-btn:hover:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 200;
+    animation: none;
+    border-radius: 0;
+    
+  }
+  
+  .about-content .play-btn:hover:after {
+    border-left: 15px solid var(--color-primary);
+    transform: scale(20);
+  }
+  
+  @keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  
+  
+
+
 
 
 
